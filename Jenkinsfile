@@ -33,7 +33,7 @@ pipeline {
 
         script {
             node {
-                'docker-compose down'
+                sh 'docker-compose down'
             }
         }
     }

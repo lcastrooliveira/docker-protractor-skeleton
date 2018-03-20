@@ -7,11 +7,11 @@ and then run protractor sample tests in tests/conf.js. It was designed to run as
 
 ## Getting Started
 
-In order to run this project you must have docker and docker-compose installed. You also need export your UID to variable called USER in order
+In order to run this project you must have docker and docker-compose installed. You also need export your UID to variable called USER_ID in order
 to npm download dependencies with your user name. The sequence of commands are the following:
 
 ```
-export USER=${UID}
+export USER_ID=${UID}
 docker-compose up protractor-tests
 ```
 

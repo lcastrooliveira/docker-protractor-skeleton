@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  protractor-tests:
+    image: 'monostream/nodejs-gulp-bower:latest'
+    command: ./run_tests.sh
+    user: "${USER}:${USER}"
+    networks:
+      - selenium_net
+    depends_on: 
+      - selenium
+    environment:
+      - HOME=.
+    volumes:
+      - .:/workspace
+  
+  selenium:
+    image: selenium/standalone-chrome-debug:3.11.0
+    networks:
+      - selenium_net
+    user: "${USER}:${USER}"
+    ports:
+      - '4444'
+      - '5900'
+
+networks:
+  selenium_net:
+    driver: bridge

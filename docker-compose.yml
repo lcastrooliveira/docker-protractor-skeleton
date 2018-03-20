@@ -12,7 +12,7 @@ services:
     environment:
       - HOME=.
     volumes:
-      - .:/workspace
+      - ${PWD}:/workspace
   
   selenium:
     image: selenium/standalone-chrome-debug:3.11.0

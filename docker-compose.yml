@@ -18,7 +18,7 @@ services:
     image: selenium/standalone-chrome-debug:3.11.0
     networks:
       - selenium_net
-    user: "${USER}:${USER}"
+    user: "${USER_ID}:${USER_ID}"
     ports:
       - '4444'
       - '5900'

@@ -2,8 +2,7 @@ version: '3'
 
 services:
   protractor-tests:
-    image: 'monostream/nodejs-gulp-bower:latest'
-    entrypoint: sh /workspace/scripts/run_tests.sh
+    build: '.'
     user: "${USER_ID}:${USER_ID}"
     networks:
       - selenium_net

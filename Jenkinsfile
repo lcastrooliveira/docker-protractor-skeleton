@@ -17,11 +17,13 @@ pipeline {
     }
 
     stage('Run tests') {
-      agent docker {
-        image 'weboaks/node-karma-protractor-chrome:headless'
-        steps {
-          sh 'npm install --no-deps'
+      agent {
+        docker {
+          image 'weboaks/node-karma-protractor-chrome:headless'
         }
+      }
+      steps {
+        sh 'npm install --no-deps'
       }
 	  }
   }   

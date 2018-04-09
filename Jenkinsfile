@@ -19,7 +19,7 @@ pipeline {
     stage('Run tests') {
       agent {
         docker {
-          image 'weboaks/node-karma-protractor-chrome:headless'
+          image 'weboaks/node-karma-protractor-chrome:alpine'
         }
       }
       steps {

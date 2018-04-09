@@ -24,6 +24,7 @@ pipeline {
       }
       steps {
         sh 'npm install --no-deps'
+        sh 'npm run webdriver-update'
         sh 'npm protractor tests/conf.js'
       }
 	  }

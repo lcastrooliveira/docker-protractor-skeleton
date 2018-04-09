@@ -24,7 +24,7 @@ pipeline {
       }
       steps {
         sh 'npm install --no-deps'
-        sh 'protractor tests/conf.js'
+        sh 'npm protractor tests/conf.js'
       }
 	  }
   }   
